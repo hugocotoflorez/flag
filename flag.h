@@ -16,6 +16,7 @@
 
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 #ifndef FLAG_H_
@@ -41,6 +42,7 @@ __flag_check_init()
 {
         if (init != 0) return;
         printf("ERROR: Bad usage of flag.h! Dont forget to call `flag_set()`.\n");
+        abort();
 }
 
 static int
